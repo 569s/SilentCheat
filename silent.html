@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Silent Cheat</title>
+    <link rel="icon" href="https://raw.githubusercontent.com/569s/SilentCheat/refs/heads/main/favicon.ico?token=GHSAT0AAAAAAC4M3JLWT5X2AOX3FHI2OFMCZ3QIBSA" type="image/x-icon">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400&display=swap');
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            color: white;
+            text-align: center;
+            overflow-x: hidden;
+        }
+
+        .background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://i.pinimg.com/originals/e6/b4/96/e6b49602eb870c4898e7a4c597d0e937.gif') no-repeat center center fixed;
+            background-size: cover;
+            z-index: -1;
+        }
+
+        .dark-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0);
+            z-index: -1;
+            pointer-events: none;
+            transition: background-color 0.5s ease;
+        }
+
+        .banner {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 10px 20px;
+            position: sticky;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: all 0.3s ease;
+            box-sizing: border-box;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+        }
+
+        .banner.shrink {
+            background-color: black;
+            padding: 5px 20px;
+            height: 50px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+        }
+
+        .info h3 {
+            margin: 0;
+            font-size: 1.5em;
+        }
+
+        .banner-buttons {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .contact a, .news-btn a {
+            color: white;
+            text-decoration: none;
+            font-size: 1em;
+            transition: color 0.3s ease;
+        }
+
+        .contact a:hover, .news-btn a:hover {
+            color: #9400d3;
+        }
+
+        .silent-setup-btn {
+            background-color: #9400d3;
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .silent-setup-btn:hover {
+            background-color: #7200a6;
+            box-shadow: 0 0 10px #7200a6;
+        }
+
+        .content {
+            margin-top: 15vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .content h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        .download-btn {
+            font-family: 'Open Sans', sans-serif;
+            background-color: #ff440000;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 1.5em;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            box-shadow: 0 0 10px black;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .download-btn:hover {
+            background-color: #9400d3;
+            box-shadow: 0 0 20px #9400d3;
+        }
+
+        .download-btn .icon img {
+            width: 20px;
+            height: 20px;
+        }
+
+        .spacer {
+            height: 50vh;
+        }
+
+        footer {
+            background-color: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 10px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        footer a {
+            color: #9400d3;
+            text-decoration: none;
+        }
+
+        .news {
+            background-color: rgba(0, 0, 0, 0);
+            color: white;
+            padding: 30px 20px;
+            text-align: left;
+            border-radius: 10px;
+        }
+
+        .news h2 {
+            font-size: 2em;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .news-item {
+            margin-bottom: 15px;
+        }
+
+        .news-item h3 {
+            margin: 0;
+            font-size: 1.5em;
+        }
+
+        .news-item p {
+            margin: 5px 0 0 0;
+        }
+
+        .news-item .date {
+            font-size: 0.8em;
+            color: #ccc;
+        }
+    </style>
+</head>
+<body>
+    <div class="background"></div>
+    <div class="dark-overlay" id="dark-overlay"></div>
+
+    <div class="banner" id="banner">
+        <div class="info">
+            <h3>Silent Cheat</h3>
+        </div>
+        <div class="banner-buttons">
+            <div class="contact">
+                <a href="#footer-contact">Contact Us</a>
+            </div>
+            <div class="news-btn">
+                <a href="#news">News</a>
+            </div>
+            <div class="setup">
+                <a href="https://example.com/silent-setup" class="silent-setup-btn">Silent Setup</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="content">
+        <h1>Welcome to Silent Cheat</h1>
+        <p>Click to download CS2 Cheat, you can see the installation on the top right.</p>
+        <a href="https://download1531.mediafire.com/avohoplnid4g7SkKOHLxlLO8KUrxLwtKi-fzdbKLMf0fTH_QVhsdcN9CervAKjbL_fokPfV4Xn9b-JRMq6vq7cZIaknM_KCkAICjZqcssoPHYU4414K2AlswMvoECuPDVlFXMPk5L5SKEenLfbCBsQOPJX4xkfNAB6LTcKbB5VM-BA/jmnfvo2zut9dmru/Silent+Cheat.exe" class="download-btn">
+            <span class="icon">
+                <img src="https://raw.githubusercontent.com/569s/SilentCheat/refs/heads/main/download.png?token=GHSAT0AAAAAAC4M3JLW7ACHAKESSPUL3VZWZ3QICFQ" alt="Download Icon">
+            </span>
+            Download
+        </a>
+    </div>
+
+    <div class="spacer"></div>
+
+    <div class="news" id="news">
+        <h2>Website Update</h2>
+        <div class="news-item">
+            <h3>Update 1.0 Released</h3>
+            <p>Our website has become more user friendly.</p>
+            <div class="date">Published: December 28, 2024</div>
+        </div>
+        <div class="news-item">
+            <h3>CS2 News</h3>
+            <p>Our cheat is currently undetected and can be played on prime accounts.</p>
+            <div class="date">Published: December 3, 2024</div>
+        </div>
+        <div class="news-item">
+            <h3>Upcoming Features</h3>
+            <p>Our trick will switch to paid version, join the free version now.</p>
+            <div class="date">Published: November 30, 2024</div>
+        </div>
+    </div>
+
+    <footer id="footer-contact">
+        <p>&copy; 2024 Silent Cheat. All rights reserved. | <a href="mailto:support@silentcheat.com">Contact Us</a></p>
+    </footer>
+
+    <script>
+        const banner = document.getElementById('banner');
+        const darkOverlay = document.getElementById('dark-overlay');
+
+        window.addEventListener('scroll', () => {
+            const scrollY = window.scrollY;
+            const maxDarkness = 0.5;
+            const darkness = Math.min(scrollY / 500, maxDarkness);
+
+            darkOverlay.style.backgroundColor = `rgba(0, 0, 0, ${darkness})`;
+
+            if (scrollY > 50) {
+                banner.classList.add('shrink');
+            } else {
+                banner.classList.remove('shrink');
+            }
+        });
+    </script>
+</body>
+</html>
